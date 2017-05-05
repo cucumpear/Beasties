@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>CCP_EggPenguinFertilized</defName>
+    <label>penguin egg (fert.)</label>
+    <description>Fertilized penguin egg. If all goes well, it should hatch into a baby penguin. It can be eaten raw, but it's much better cooked.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+      <color>(239,234,215)</color>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>25.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaysToHatch>6</hatcherDaysToHatch>
+        <hatcherPawn>CCP_Penguin</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  
+  
+</Defs>
