@@ -22,6 +22,7 @@
       <li>ITab_Pawn_Guest</li>
       <li>ITab_Pawn_Prisoner</li>
       <li>ITab_Pawn_Social</li>
+      <li>ITab_Pawn_Combat</li>
     </inspectorTabs>
     <comps>
       <li>
@@ -43,7 +44,7 @@
       <nameGenerator>NamerAnimalGenericMale</nameGenerator>
       <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
       <manhunterOnDamageChance>0.0125</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.005</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.003</manhunterOnTameFailChance>
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
       <hediffGiverSets>
         <li>OrganicStandard</li>
@@ -51,8 +52,10 @@
     </race>
     <recipes>
 			<li>ExciseCarcinoma</li>
+      <li>AdministerMechSerumHealer</li>
       <li>RemoveBodyPart</li>
       <li>Euthanize</li>
+      <li>Anesthetize</li>
     </recipes>
   </ThingDef>
 

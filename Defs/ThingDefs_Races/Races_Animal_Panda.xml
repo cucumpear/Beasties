@@ -7,12 +7,14 @@
       <ComfyTemperatureMin>-40</ComfyTemperatureMin>
       <MarketValue>700</MarketValue>
     </statBases>
-    <verbs>
+    <tools>
       <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>2.0</defaultCooldownTime>
-        <meleeDamageBaseAmount>17</meleeDamageBaseAmount>
-        <meleeDamageDef>Scratch</meleeDamageDef>
+        <label>left claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>2.0</cooldownTime>
         <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
         <surpriseAttack>
           <extraMeleeDamages>
@@ -24,10 +26,12 @@
         </surpriseAttack>
       </li>
       <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>2.0</defaultCooldownTime>
-        <meleeDamageBaseAmount>17</meleeDamageBaseAmount>
-        <meleeDamageDef>Scratch</meleeDamageDef>
+        <label>right claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>2.0</cooldownTime>
         <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         <surpriseAttack>
           <extraMeleeDamages>
@@ -39,10 +43,11 @@
         </surpriseAttack>
       </li>
       <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>1.65</defaultCooldownTime>
-        <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
-        <meleeDamageDef>Bite</meleeDamageDef>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>1.65</cooldownTime>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
         <surpriseAttack>
           <extraMeleeDamages>
@@ -53,7 +58,17 @@
           </extraMeleeDamages>
         </surpriseAttack>
       </li>
-    </verbs>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>1.65</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <commonality>0.2</commonality>
+      </li>
+    </tools>
     <race>
       <herdAnimal>false</herdAnimal>
       <predator>true</predator>
@@ -66,7 +81,7 @@
       <wildness>0.80</wildness>
       <lifeExpectancy>22</lifeExpectancy>
       <trainableIntelligence>Advanced</trainableIntelligence>
-      <manhunterOnTameFailChance>0.025</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
       <manhunterOnDamageChance>1</manhunterOnDamageChance>
       <lifeStageAges>
         <li>
@@ -79,7 +94,7 @@
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>1.9</minAge>
+          <minAge>0.8</minAge>
           <soundWounded>Pawn_Bear_Injured</soundWounded>
           <soundDeath>Pawn_Bear_Death</soundDeath>
           <soundCall>Pawn_Bear_Call</soundCall>
@@ -97,7 +112,7 @@
   </ThingDef>
   
   <PawnKindDef Abstract="True" ParentName="AnimalKindBase" Name="BearBase">
-    <combatPower>240</combatPower>
+    <combatPower>200</combatPower>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.3</wildSpawn_EcoSystemWeight>
   </PawnKindDef>
@@ -126,7 +141,9 @@
       <petness>0.5</petness>
       <wildBiomes>
 		<TropicalRainforest>0.15</TropicalRainforest>
+		<TropicalSwamp>0.15</TropicalSwamp>
 		<TemperateForest>0.08</TemperateForest>
+		<TemperateSwamp>0.08</TemperateSwamp>
 		<BorealForest>0.02</BorealForest>
       </wildBiomes>	      
 	  <manhunterOnTameFailChance>0.015</manhunterOnTameFailChance>
