@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
   <ThingDef ParentName="BigBirdThingBase">
-    <defName>CCP_Kiwi</defName>
+    <defName>CCPBKiwi</defName>
     <label>kiwi</label>
     <description>A flighless bird with unusually large eggs.</description>
     <statBases>
       <MoveSpeed>2.7</MoveSpeed>
       <ComfyTemperatureMin>-15</ComfyTemperatureMin>
       <MarketValue>230</MarketValue>
-	  <LeatherAmount>0</LeatherAmount>
     </statBases>
     <race>
       <herdAnimal>true</herdAnimal>
@@ -20,115 +18,96 @@
       <foodType>OmnivoreAnimal</foodType>
       <wildness>0.80</wildness>
       <lifeExpectancy>6</lifeExpectancy>
+      <leatherDef>Leather_Bird</leatherDef>
       <useMeatFrom>Cassowary</useMeatFrom>
       <wildBiomes>
-		<TropicalRainforest>0.2</TropicalRainforest>
-		<TropicalSwamp>0.11</TropicalSwamp>
-		<TemperateForest>0.17</TemperateForest>
-		<TemperateSwamp>0.12</TemperateSwamp>
-		<BorealForest>0.13</BorealForest>
-		<ColdBog>0.5</ColdBog>
-		<Tundra>0.01</Tundra>
+        <TropicalRainforest>0.2</TropicalRainforest>
+        <TemperateForest>0.17</TemperateForest>
+        <BorealForest>0.13</BorealForest>
+        <Tundra>0.01</Tundra>
       </wildBiomes>
       <manhunterOnTameFailChance>0.0015</manhunterOnTameFailChance>
     </race>
     <comps>
       <li Class="CompProperties_EggLayer">
-        <eggFertilizedDef>CCP_EggKiwiFertilized</eggFertilizedDef>
+        <eggFertilizedDef>CCPBEggKiwiFertilized</eggFertilizedDef>
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>15</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
     </comps>
-    <tools>
+   <tools>
       <li>
         <label>claws</label>
         <capacities>
           <li>Scratch</li>
         </capacities>
         <power>2</power>
-        <cooldownTime>1.5</cooldownTime>
+        <cooldownTime>1.65</cooldownTime>
         <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>20</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
       </li>
       <li>
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>4</power>
-        <cooldownTime>1.7</cooldownTime>
+        <power>3</power>
+        <cooldownTime>1.85</cooldownTime>
         <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>20</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
       </li>
       <li>
         <label>head</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>3</power>
+        <power>1</power>
         <cooldownTime>1.65</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <commonality>0.2</commonality>
+        <chanceFactor>0.2</chanceFactor>
       </li>
     </tools>
+    <tradeTags>
+      <li>AnimalCommon</li>
+    </tradeTags>
   </ThingDef>
-
+  
   <PawnKindDef ParentName="BigBirdKindBase">
-    <defName>CCP_Kiwi</defName>
+    <defName>CCPBKiwi</defName>
     <label>kiwi</label>
-    <race>CCP_Kiwi</race>
-    <wildSpawn_GroupSizeRange>
+    <race>CCPBKiwi</race>
+    <wildGroupSize>
       <min>2</min>
       <max>3</max>
-    </wildSpawn_GroupSizeRange>
+    </wildGroupSize>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>CPBeasties/Kiwi/Kiwi</texPath>
-          <drawSize>0.65</drawSize>
+        <texPath>CCPBeasties/Kiwi/Kiwi</texPath>
+        <drawSize>0.65</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
-          <drawSize>0.55</drawSize>
-        </dessicatedBodyGraphicData>
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>CPBeasties/Kiwi/Kiwi</texPath>
-          <drawSize>0.7</drawSize>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <texPath>Things/Pawn/Animal/Hare/Dessicated_Hare</texPath>
           <drawSize>0.6</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>CPBeasties/Kiwi/Kiwi</texPath>
-          <drawSize>0.9</drawSize>
-          <shadowData>
-            <volume>(0.25, 0.3, 0.25)</volume>
-            <offset>(0,0,0)</offset>
-          </shadowData>
+          <texPath>CCPBeasties/Kiwi/Kiwi</texPath>
+          <drawSize>0.7</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
-          <drawSize>0.8</drawSize>
+          <texPath>Things/Pawn/Animal/Hare/Dessicated_Hare</texPath>
+          <drawSize>0.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>CCPBeasties/Kiwi/Kiwi</texPath>
+          <drawSize>0.9</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Hare/Dessicated_Hare</texPath>
+          <drawSize>0.9</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
